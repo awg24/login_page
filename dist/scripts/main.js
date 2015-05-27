@@ -6,8 +6,8 @@ $(document).ready(function(){
 	$password = $("#password");
 	$form = $("#login");
 
-	var acceptableUsernames = ["aaron@theironyard.com", "admin@google.com"];
-	var acceptablePasswordForUsername = ["password123","pandas"];
+	var acceptableUsernames = ["aaron@theironyard.com", "admin@google.com","admin@admin.com"];
+	var acceptablePasswordForUsername = ["password123","pandas","admin"];
 
 	$form.on("submit", validateInfo);
 

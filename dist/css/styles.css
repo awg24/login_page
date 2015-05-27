@@ -53,6 +53,6 @@ button {
   background: YellowGreen;
   border: 1px solid black;
   color: white;
-  box-shadow: 2px 1px 1px black;
+  box-shadow: 1px -1px 1px black;
   text-shadow: 0px -1.5px black;
   font-size: 15px; }
