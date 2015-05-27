@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	var loginAttempts = 0;
+
 	$username = $("#username");
 	$password = $("#password");
 	$form = $("#login");
@@ -29,6 +31,7 @@ $(document).ready(function(){
 			sendError();
 			window.location.href = "http://theironyard.com";
 		}
+
 	}
 	
 	function sendError(errorCode){
@@ -37,14 +40,17 @@ $(document).ready(function(){
 
 		switch(errorCode){
 			case 0: $error.html("*Username AND password must not be blank!");
+					loginAttempts++;
 			break;
 			case 1: $error.html("*Password is incorrect!");
+					loginAttempts++;
 			break;
 			case 2: $error.html("*Username does not exist!");
+					loginAttempts++;
 			break;
 			default: $error.html("");
+			console.log(loginAttempts);
 		}
-		
 		
 	}
 });
